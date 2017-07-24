@@ -29,6 +29,6 @@ fecha date
 
 create table materias(
 cve_mat int primary key,
-nom_mat varchar(50),
+nom_mat varchar(60),
 grado_mat varchar(55)
 );
