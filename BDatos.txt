@@ -3,7 +3,7 @@ create database escuela;
 use escuela;
 
 create table alumnos(
-matricula varchar(50) primary key,
+matricula varchar(101) primary key,
 nombre varchar(50),
 direccion varchar(50),
 telefono varchar(50),
