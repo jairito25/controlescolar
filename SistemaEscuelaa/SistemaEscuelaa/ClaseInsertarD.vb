@@ -126,6 +126,8 @@ Public Class ClaseInsertarD
             .FilterIndex = 1
             'restaurar el directorio al cerrar el dialogo
             .RestoreDirectory = True
+            MsgBox()
+
         End With
         '
         If openfiler.ShowDialog = Windows.Forms.DialogResult.OK Then  'Evalua si el usuario hace click en el boton abrir
