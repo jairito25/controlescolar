@@ -1,0 +1,63 @@
+Se ponen en los eventos key press de los textbox
+
+Numeric Input
+
+If Char.IsNumber(e.KeyChar) = False Then
+    If e.KeyChar = CChar(ChrW(Keys.Back)) or e.KeyChar = CChar(ChrW(
+        Keys.Space)) Then
+        e.Handled = False
+    Else
+        e.Handled = True
+    End If
+End If
+
+
+Alphabetical Input
+
+
+If Char.IsLetter(e.KeyChar) = False Then
+    If e.KeyChar = CChar(ChrW(Keys.Back)) or e.KeyChar = CChar(ChrW(
+        Keys.Space)) Then
+        e.Handled = False
+    Else
+        e.Handled = True
+    End If
+End If
+
+Alphanumeric Input
+
+If Char.IsLetterOrDigit(e.KeyChar) = False Then
+    If e.KeyChar = CChar(ChrW(Keys.Back)) or e.KeyChar = CChar(ChrW(
+        Keys.Space)) Then
+        e.Handled = False
+    Else
+        e.Handled = True
+    End If
+End If
+
+Decimal Input
+
+
+If Char.IsNumber(e.KeyChar) = False Then
+    If e.KeyChar = CChar(ChrW(Keys.Back)) Or e.KeyChar = 
+        CChar(".") or e.KeyChar = CChar(ChrW(Keys.Space)) Then
+        e.Handled = False
+    Else
+        e.Handled = True
+    End If
+End If
+
+Numeric Input on Multiple Textboxes
+
+Private Sub TextBox1_KeyPress(ByVal sender As System.Object, ByVal e As _ 
+    System.Windows.Forms.KeyPressEventArgs) Handles TexBox1.KeyPress, _ 
+    TextBox2.KeyPress, TextBox3.KeyPress, TextBox4.KeyPress
+    If Char.IsNumber(e.KeyChar) = False Then
+         If e.KeyChar = CChar(ChrW(Keys.Back)) or e.KeyChar = CChar(
+             ChrW(Keys.Space)) Then
+             e.Handled = False
+         Else
+             e.Handled = True
+         End If
+    End If
+End If

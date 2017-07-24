@@ -1,0 +1,34 @@
+drop database escuela;
+create database escuela;
+use escuela;
+
+create table alumnos(
+matricula varchar(50) primary key,
+nombre varchar(50),
+direccion varchar(50),
+telefono varchar(50),
+sexo varchar(2),
+foto blob,
+nombreTutor varchar(50),
+direccionTutor varchar(50),
+telefonoTutor varchar(50),
+correoTutor varchar(50)
+);
+
+create table profesores(
+clave varchar(50) primary key,
+nombre varchar(50),
+direccion varchar(50),
+telefono varchar(50),
+sexo varchar(2),
+correo varchar(50),
+foto blob,
+profesion varchar(50),
+fecha date
+);
+
+create table materias(
+cve_mat int primary key,
+nom_mat varchar(50),
+grado_mat varchar(50)
+);

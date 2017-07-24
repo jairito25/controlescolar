@@ -1,0 +1,10 @@
+C:\Users\Admin\Desktop\control escolar\SistemaEscuelaa\SistemaEscuelaa\bin\Release\SistemaEscuelaa.exe
+C:\Users\Admin\Desktop\control escolar\SistemaEscuelaa\SistemaEscuelaa\bin\Release\SistemaEscuelaa.pdb
+C:\Users\Admin\Desktop\control escolar\SistemaEscuelaa\SistemaEscuelaa\bin\Release\SistemaEscuelaa.xml
+C:\Users\Admin\Desktop\control escolar\SistemaEscuelaa\SistemaEscuelaa\obj\Release\ResolveAssemblyReference.cache
+C:\Users\Admin\Desktop\control escolar\SistemaEscuelaa\SistemaEscuelaa\obj\Release\SistemaEscuelaa.Resources.resources
+C:\Users\Admin\Desktop\control escolar\SistemaEscuelaa\SistemaEscuelaa\obj\Release\SistemaEscuelaa.vbproj.GenerateResource.Cache
+C:\Users\Admin\Desktop\control escolar\SistemaEscuelaa\SistemaEscuelaa\obj\Release\SistemaEscuelaa.exe
+C:\Users\Admin\Desktop\control escolar\SistemaEscuelaa\SistemaEscuelaa\obj\Release\SistemaEscuelaa.xml
+C:\Users\Admin\Desktop\control escolar\SistemaEscuelaa\SistemaEscuelaa\obj\Release\SistemaEscuelaa.pdb
+C:\Users\Admin\Desktop\control escolar\SistemaEscuelaa\SistemaEscuelaa\obj\Release\SistemaEscuelaa.Form1.resources
