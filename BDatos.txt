@@ -2,11 +2,11 @@ drop database escuela;
 create database escuela;
 use escuela;
 
-create table alumnos(
+create table alumnos10(
 matricula varchar(101) primary key,
 nombre varchar(60),
 direccion varchar(50),
-telefono varchar(50),
+tel varchar(50),
 sexo varchar(2),
 foto blob,
 nombreTutor varchar(50),
