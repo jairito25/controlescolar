@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 -- 
 -- Servidor: localhost
--- Tiempo de generación: 17-07-2017 a las 19:10:27
--- Versión del servidor: 5.0.45
--- Versión de PHP: 5.2.3
+-- Tiempo de generaciÃ³n: 25-07-2017 a las 12:24:41
+-- VersiÃ³n del servidor: 5.0.45
+-- VersiÃ³n de PHP: 5.2.3
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 
@@ -20,17 +20,17 @@ SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 -- 
 
 CREATE TABLE `alumno` (
-  `matricula` varchar(50) NOT NULL,
-  `nombre_completoo` varchar(45) default NULL,
+  `matricula` int(11) NOT NULL,
+  `nombre_completo` varchar(45) default NULL,
   `direccion` varchar(45) default NULL,
   `telefono` varchar(45) default NULL,
   `sexo` varchar(2) default NULL,
   `fotografia` tinyblob,
   `becado` varchar(45) default NULL,
-  `nombre_completo` varchar(45) default NULL,
-  `direccioon` varchar(45) default NULL,
-  `telefonoo` int(11) default NULL,
-  `correo` varchar(45) default NULL,
+  `nombre_completoU` varchar(45) default NULL,
+  `direccionU` varchar(45) default NULL,
+  `telefonoU` varchar(20) default NULL,
+  `correoU` varchar(45) default NULL,
   PRIMARY KEY  (`matricula`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -242,6 +242,9 @@ CREATE TABLE `usuarios` (
 -- Volcar la base de datos para la tabla `usuarios`
 -- 
 
+INSERT INTO `usuarios` VALUES (1, 'jose hender', 'Director', '123', 0x6d756374657a756d61, '7151412798', 'ender@gmail.com', 0xffd8ffe000104a46494600010100000100010000fffe003b43524541544f523a2067642d6a7065672076312e3020287573696e6720494a47204a50454720763632292c207175616c697479203d2037350affdb004300080606070605080707070909080a0c140d0c0b0b0c1912130f141d1a1f1e1d1a1c1c20242e2720222c231c1c2837292c30313434341f27393d38323c2e333432ffdb0043010909090c0b0c180d0d1832211c213232323232323232323232323232323232323232323232323232323232323232323232323232323232323232323232323232ffc00011080355028003012200021101031101ffc4001f00000105010101010101000000);
+INSERT INTO `usuarios` VALUES (2, 'cesar de la rosa', 'Profesor', '456', 0x6275656e61207669737461, '1234456', 'cesar@gmail.com', 0xffd8ffe000104a46494600010100000100010000fffe003b43524541544f523a2067642d6a7065672076312e3020287573696e6720494a47204a50454720763632292c207175616c697479203d2037350affdb004300080606070605080707070909080a0c140d0c0b0b0c1912130f141d1a1f1e1d1a1c1c20242e2720222c231c1c2837292c30313434341f27393d38323c2e333432ffdb0043010909090c0b0c180d0d1832211c213232323232323232323232323232323232323232323232323232323232323232323232323232323232323232323232323232ffc00011080355028003012200021101031101ffc4001f00000105010101010101000000);
+INSERT INTO `usuarios` VALUES (3, 'jairo', 'Operador', '678', 0x6c61206a6f7961, '2345678', 'jairo@gmail.com', 0xffd8ffe000104a46494600010100000100010000fffe003b43524541544f523a2067642d6a7065672076312e3020287573696e6720494a47204a50454720763632292c207175616c697479203d2037350affdb004300080606070605080707070909080a0c140d0c0b0b0c1912130f141d1a1f1e1d1a1c1c20242e2720222c231c1c2837292c30313434341f27393d38323c2e333432ffdb0043010909090c0b0c180d0d1832211c213232323232323232323232323232323232323232323232323232323232323232323232323232323232323232323232323232ffc00011080355028003012200021101031101ffc4001f00000105010101010101000000);
 
 -- 
 -- Filtros para las tablas descargadas (dump)
@@ -255,25 +258,11 @@ ALTER TABLE `aula_has_grupo`
   ADD CONSTRAINT `fk_aula_has_grupo_grupo1` FOREIGN KEY (`grupo_cve_gru`) REFERENCES `grupo` (`cve_gru`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 -- 
--- Filtros para la tabla `evaluacion`
--- 
-ALTER TABLE `evaluacion`
-  ADD CONSTRAINT `fk_evaluacion_alumno1` FOREIGN KEY (`alumno_matricula`) REFERENCES `alumno` (`matricula`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `fk_evaluacion_materia1` FOREIGN KEY (`materia_cve_mat`) REFERENCES `materia` (`cve_mat`) ON DELETE NO ACTION ON UPDATE NO ACTION;
-
--- 
 -- Filtros para la tabla `grupo`
 -- 
 ALTER TABLE `grupo`
   ADD CONSTRAINT `fk_grupo_ciclo1` FOREIGN KEY (`ciclo_cve_ciclo`) REFERENCES `ciclo` (`cve_ciclo`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   ADD CONSTRAINT `fk_grupo_profesor1` FOREIGN KEY (`profesor_cve_pro`) REFERENCES `profesor` (`cve_pro`) ON DELETE NO ACTION ON UPDATE NO ACTION;
-
--- 
--- Filtros para la tabla `grupo_has_alumno`
--- 
-ALTER TABLE `grupo_has_alumno`
-  ADD CONSTRAINT `fk_grupo_has_alumno_alumno1` FOREIGN KEY (`alumno_matricula`) REFERENCES `alumno` (`matricula`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `fk_grupo_has_alumno_grupo1` FOREIGN KEY (`grupo_cve_gru`) REFERENCES `grupo` (`cve_gru`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 -- 
 -- Filtros para la tabla `grupo_has_materia`
