@@ -175,12 +175,14 @@ Public Class Form1
 
     End Sub
 
-   
+    Private Sub Button6_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button6.Click       
+        Dim conexionClase As New ClaseInsertarD
+
+        conexionClase.abrir_inventario_existente()
+    End Sub
 
     'VALIDACIONES DE CAMPOS DE TEXTO
-
     
-
     Private Sub TextBox_KeyPressNumerico(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles TextBox1.KeyPress, TextBox4.KeyPress, TextBox8.KeyPress
         'NUMERICO
         If Char.IsNumber(e.KeyChar) = False Then
