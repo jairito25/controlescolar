@@ -14,10 +14,10 @@ Public Class Form1
     End Sub
 
 
-    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Dim conexion As New ClaseInsertarD
         Dim datos As New ClaseDatos
-        
+
         'Dim atributos As New Collection
         'Dim valores As New Collection
         'Dim tipos As New Collection
@@ -56,15 +56,15 @@ Public Class Form1
         datos.colNueve = TextBox8.Text
         datos.colDiez = TextBox9.Text
 
-            If conexion.insertarDatos(datos) Then
-                MessageBox.Show("Datos Guardados")
-                consultaDatos()
-                DataGridView1.DataSource = dtsvdatos
-            Else
+        If conexion.insertarDatos(datos) Then
+            MessageBox.Show("Datos Guardados")
+            consultaDatos()
+            DataGridView1.DataSource = dtsvdatos
+        Else
 
-                MessageBox.Show("Datos no guardados")
+            MessageBox.Show("Datos no guardados")
 
-            End If        
+        End If
     End Sub
 
 
@@ -163,7 +163,7 @@ Public Class Form1
     End Sub
 
 
-    Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button3.Click
+    Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         dtsdatos.Reset()
         dtsdatosI.Reset()
         consultaDatosIndividual(TextBox1.Text)
