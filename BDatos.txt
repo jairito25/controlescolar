@@ -4,7 +4,7 @@ use escuela;
 
 create table alumnos(
 matricula varchar(101) primary key,
-nombre varchar(50),
+nombre varchar(60),
 direccion varchar(50),
 telefono varchar(50),
 sexo varchar(2),
