@@ -1,0 +1,283 @@
+-- phpMyAdmin SQL Dump
+-- version 2.10.2
+-- http://www.phpmyadmin.net
+-- 
+-- Servidor: localhost
+-- Tiempo de generación: 17-07-2017 a las 19:10:27
+-- Versión del servidor: 5.0.45
+-- Versión de PHP: 5.2.3
+
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+
+-- 
+-- Base de datos: `escuela`
+-- 
+
+-- --------------------------------------------------------
+
+-- 
+-- Estructura de tabla para la tabla `alumno`
+-- 
+
+CREATE TABLE `alumno` (
+  `matricula` varchar(50) NOT NULL,
+  `nombre_completoo` varchar(45) default NULL,
+  `direccion` varchar(45) default NULL,
+  `telefono` varchar(45) default NULL,
+  `sexo` varchar(2) default NULL,
+  `fotografia` tinyblob,
+  `becado` varchar(45) default NULL,
+  `nombre_completo` varchar(45) default NULL,
+  `direccioon` varchar(45) default NULL,
+  `telefonoo` int(11) default NULL,
+  `correo` varchar(45) default NULL,
+  PRIMARY KEY  (`matricula`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- 
+-- Volcar la base de datos para la tabla `alumno`
+-- 
+
+
+-- --------------------------------------------------------
+
+-- 
+-- Estructura de tabla para la tabla `aula`
+-- 
+
+CREATE TABLE `aula` (
+  `cve_au` int(11) NOT NULL,
+  `nom_au` varchar(45) default NULL,
+  `capacidad` int(11) default NULL,
+  PRIMARY KEY  (`cve_au`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- 
+-- Volcar la base de datos para la tabla `aula`
+-- 
+
+
+-- --------------------------------------------------------
+
+-- 
+-- Estructura de tabla para la tabla `aula_has_grupo`
+-- 
+
+CREATE TABLE `aula_has_grupo` (
+  `aula_cve_au` int(11) NOT NULL,
+  `grupo_cve_gru` int(11) NOT NULL,
+  PRIMARY KEY  (`aula_cve_au`,`grupo_cve_gru`),
+  KEY `fk_aula_has_grupo_grupo1_idx` (`grupo_cve_gru`),
+  KEY `fk_aula_has_grupo_aula1_idx` (`aula_cve_au`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- 
+-- Volcar la base de datos para la tabla `aula_has_grupo`
+-- 
+
+
+-- --------------------------------------------------------
+
+-- 
+-- Estructura de tabla para la tabla `ciclo`
+-- 
+
+CREATE TABLE `ciclo` (
+  `cve_ciclo` int(11) NOT NULL,
+  `fecha_ciclo` varchar(45) default NULL,
+  PRIMARY KEY  (`cve_ciclo`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- 
+-- Volcar la base de datos para la tabla `ciclo`
+-- 
+
+
+-- --------------------------------------------------------
+
+-- 
+-- Estructura de tabla para la tabla `evaluacion`
+-- 
+
+CREATE TABLE `evaluacion` (
+  `cve_eva` int(11) NOT NULL,
+  `bim_1` float NOT NULL,
+  `bim_2` float NOT NULL,
+  `bim_4` float NOT NULL,
+  `bim_5` float NOT NULL,
+  `materia_cve_mat` int(11) NOT NULL,
+  `alumno_matricula` varchar(50) NOT NULL,
+  PRIMARY KEY  (`cve_eva`),
+  KEY `fk_evaluacion_materia1_idx` (`materia_cve_mat`),
+  KEY `fk_evaluacion_alumno1_idx` (`alumno_matricula`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- 
+-- Volcar la base de datos para la tabla `evaluacion`
+-- 
+
+
+-- --------------------------------------------------------
+
+-- 
+-- Estructura de tabla para la tabla `grupo`
+-- 
+
+CREATE TABLE `grupo` (
+  `cve_gru` int(11) NOT NULL,
+  `nombre_gru` varchar(45) default NULL,
+  `profesor_cve_pro` int(11) NOT NULL,
+  `ciclo_cve_ciclo` int(11) NOT NULL,
+  PRIMARY KEY  (`cve_gru`),
+  KEY `fk_grupo_profesor1_idx` (`profesor_cve_pro`),
+  KEY `fk_grupo_ciclo1_idx` (`ciclo_cve_ciclo`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- 
+-- Volcar la base de datos para la tabla `grupo`
+-- 
+
+
+-- --------------------------------------------------------
+
+-- 
+-- Estructura de tabla para la tabla `grupo_has_alumno`
+-- 
+
+CREATE TABLE `grupo_has_alumno` (
+  `grupo_cve_gru` int(11) NOT NULL,
+  `alumno_matricula` varchar(50) NOT NULL,
+  PRIMARY KEY  (`grupo_cve_gru`,`alumno_matricula`),
+  KEY `fk_grupo_has_alumno_alumno1_idx` (`alumno_matricula`),
+  KEY `fk_grupo_has_alumno_grupo1_idx` (`grupo_cve_gru`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- 
+-- Volcar la base de datos para la tabla `grupo_has_alumno`
+-- 
+
+
+-- --------------------------------------------------------
+
+-- 
+-- Estructura de tabla para la tabla `grupo_has_materia`
+-- 
+
+CREATE TABLE `grupo_has_materia` (
+  `grupo_cve_gru` int(11) NOT NULL,
+  `materia_cve_mat` int(11) NOT NULL,
+  PRIMARY KEY  (`grupo_cve_gru`,`materia_cve_mat`),
+  KEY `fk_grupo_has_materia_materia1_idx` (`materia_cve_mat`),
+  KEY `fk_grupo_has_materia_grupo1_idx` (`grupo_cve_gru`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- 
+-- Volcar la base de datos para la tabla `grupo_has_materia`
+-- 
+
+
+-- --------------------------------------------------------
+
+-- 
+-- Estructura de tabla para la tabla `materia`
+-- 
+
+CREATE TABLE `materia` (
+  `cve_mat` int(11) NOT NULL,
+  `nom_mat` varchar(45) default NULL,
+  `hora_entrada` varchar(45) default NULL,
+  `hora_salida` varchar(45) default NULL,
+  `grado` varchar(20) default NULL,
+  PRIMARY KEY  (`cve_mat`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- 
+-- Volcar la base de datos para la tabla `materia`
+-- 
+
+
+-- --------------------------------------------------------
+
+-- 
+-- Estructura de tabla para la tabla `profesor`
+-- 
+
+CREATE TABLE `profesor` (
+  `cve_pro` int(11) NOT NULL,
+  `nombre_completo` varchar(45) default NULL,
+  `direccion` varchar(45) default NULL,
+  `telefono` varchar(45) default NULL,
+  `sexo` varchar(2) default NULL,
+  `correo` varchar(45) default NULL,
+  `fotografia` tinyblob,
+  `profesion` varchar(45) default NULL,
+  `fecha_ingreso` date default NULL,
+  PRIMARY KEY  (`cve_pro`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- 
+-- Volcar la base de datos para la tabla `profesor`
+-- 
+
+
+-- --------------------------------------------------------
+
+-- 
+-- Estructura de tabla para la tabla `usuarios`
+-- 
+
+CREATE TABLE `usuarios` (
+  `cve_usu` int(10) unsigned NOT NULL,
+  `nombre_completo` varchar(45) default NULL,
+  `nombre_usuario` varchar(40) NOT NULL,
+  `password` varchar(40) NOT NULL,
+  `direccion` varchar(45) character set latin1 collate latin1_bin default NULL,
+  `telefono` varchar(45) default NULL,
+  `correo` varchar(45) default NULL,
+  `fotogafia` tinyblob,
+  PRIMARY KEY  (`cve_usu`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- 
+-- Volcar la base de datos para la tabla `usuarios`
+-- 
+
+
+-- 
+-- Filtros para las tablas descargadas (dump)
+-- 
+
+-- 
+-- Filtros para la tabla `aula_has_grupo`
+-- 
+ALTER TABLE `aula_has_grupo`
+  ADD CONSTRAINT `fk_aula_has_grupo_aula1` FOREIGN KEY (`aula_cve_au`) REFERENCES `aula` (`cve_au`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `fk_aula_has_grupo_grupo1` FOREIGN KEY (`grupo_cve_gru`) REFERENCES `grupo` (`cve_gru`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+-- 
+-- Filtros para la tabla `evaluacion`
+-- 
+ALTER TABLE `evaluacion`
+  ADD CONSTRAINT `fk_evaluacion_alumno1` FOREIGN KEY (`alumno_matricula`) REFERENCES `alumno` (`matricula`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `fk_evaluacion_materia1` FOREIGN KEY (`materia_cve_mat`) REFERENCES `materia` (`cve_mat`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+-- 
+-- Filtros para la tabla `grupo`
+-- 
+ALTER TABLE `grupo`
+  ADD CONSTRAINT `fk_grupo_ciclo1` FOREIGN KEY (`ciclo_cve_ciclo`) REFERENCES `ciclo` (`cve_ciclo`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `fk_grupo_profesor1` FOREIGN KEY (`profesor_cve_pro`) REFERENCES `profesor` (`cve_pro`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+-- 
+-- Filtros para la tabla `grupo_has_alumno`
+-- 
+ALTER TABLE `grupo_has_alumno`
+  ADD CONSTRAINT `fk_grupo_has_alumno_alumno1` FOREIGN KEY (`alumno_matricula`) REFERENCES `alumno` (`matricula`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `fk_grupo_has_alumno_grupo1` FOREIGN KEY (`grupo_cve_gru`) REFERENCES `grupo` (`cve_gru`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+-- 
+-- Filtros para la tabla `grupo_has_materia`
+-- 
+ALTER TABLE `grupo_has_materia`
+  ADD CONSTRAINT `fk_grupo_has_materia_grupo1` FOREIGN KEY (`grupo_cve_gru`) REFERENCES `grupo` (`cve_gru`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `fk_grupo_has_materia_materia1` FOREIGN KEY (`materia_cve_mat`) REFERENCES `materia` (`cve_mat`) ON DELETE NO ACTION ON UPDATE NO ACTION;
