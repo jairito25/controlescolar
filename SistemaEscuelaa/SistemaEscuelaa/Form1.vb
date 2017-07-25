@@ -14,7 +14,7 @@ Public Class Form1
     End Sub
 
 
-    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
         Dim conexion As New ClaseInsertarD
         Dim datos As New ClaseDatos
 
@@ -163,7 +163,7 @@ Public Class Form1
     End Sub
 
 
-    Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+    Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button3.Click
         dtsdatos.Reset()
         dtsdatosI.Reset()
         consultaDatosIndividual(TextBox1.Text)
@@ -175,11 +175,7 @@ Public Class Form1
 
     End Sub
 
-    Private Sub Button6_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button6.Click       
-        Dim conexionClase As New ClaseInsertarD
-
-        conexionClase.abrir_inventario_existente()
-    End Sub
+   
 
     'VALIDACIONES DE CAMPOS DE TEXTO
 
