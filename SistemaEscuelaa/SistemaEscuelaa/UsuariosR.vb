@@ -17,4 +17,6 @@ Public Class UsuariosR
         CrystalReportViewer1.ReportSource = obj
         CrystalReportViewer1.Refresh()
     End Sub
+
+
 End Class
