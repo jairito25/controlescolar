@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 -- 
 -- Servidor: localhost
--- Tiempo de generación: 19-07-2017 a las 23:58:05
--- Versión del servidor: 5.0.45
--- Versión de PHP: 5.2.3
+-- Tiempo de generaciÃ³n: 26-07-2017 a las 22:32:12
+-- VersiÃ³n del servidor: 5.0.45
+-- VersiÃ³n de PHP: 5.2.3
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 
@@ -16,10 +16,10 @@ SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 -- --------------------------------------------------------
 
 -- 
--- Estructura de tabla para la tabla `alumno`
+-- Estructura de tabla para la tabla `alumnos`
 -- 
 
-CREATE TABLE `alumno` (
+CREATE TABLE `alumnos` (
   `matricula` varchar(50) NOT NULL,
   `nombre_completoo` varchar(45) default NULL,
   `direccion` varchar(45) default NULL,
@@ -35,17 +35,17 @@ CREATE TABLE `alumno` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- 
--- Volcar la base de datos para la tabla `alumno`
+-- Volcar la base de datos para la tabla `alumnos`
 -- 
 
 
 -- --------------------------------------------------------
 
 -- 
--- Estructura de tabla para la tabla `aula`
+-- Estructura de tabla para la tabla `aulas`
 -- 
 
-CREATE TABLE `aula` (
+CREATE TABLE `aulas` (
   `cve_au` int(11) NOT NULL,
   `nom_au` varchar(45) default NULL,
   `capacidad` int(11) default NULL,
@@ -53,7 +53,7 @@ CREATE TABLE `aula` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- 
--- Volcar la base de datos para la tabla `aula`
+-- Volcar la base de datos para la tabla `aulas`
 -- 
 
 
@@ -179,10 +179,10 @@ CREATE TABLE `grupo_has_materia` (
 -- --------------------------------------------------------
 
 -- 
--- Estructura de tabla para la tabla `materia`
+-- Estructura de tabla para la tabla `materias`
 -- 
 
-CREATE TABLE `materia` (
+CREATE TABLE `materias` (
   `cve_mat` int(11) NOT NULL,
   `nom_mat` varchar(45) default NULL,
   `hora_entrada` varchar(45) default NULL,
@@ -192,7 +192,7 @@ CREATE TABLE `materia` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- 
--- Volcar la base de datos para la tabla `materia`
+-- Volcar la base de datos para la tabla `materias`
 -- 
 
 
@@ -243,3 +243,6 @@ CREATE TABLE `usuarios` (
 -- Volcar la base de datos para la tabla `usuarios`
 -- 
 
+INSERT INTO `usuarios` VALUES (1, 'jose hender', 'Director', '123', 0x66666768, '71511108153', 'usuario@tecnologico.com', 0xffd8ffe000104a46494600010100000100010000fffe003b43524541544f523a2067642d6a7065672076312e3020287573696e6720494a47204a50454720763632292c207175616c697479203d2037350affdb004300080606070605080707070909080a0c140d0c0b0b0c1912130f141d1a1f1e1d1a1c1c20242e2720222c231c1c2837292c30313434341f27393d38323c2e333432ffdb0043010909090c0b0c180d0d1832211c213232323232323232323232323232323232323232323232323232323232323232323232323232323232323232323232323232ffc00011080355028003012200021101031101ffc4001f00000105010101010101000000);
+INSERT INTO `usuarios` VALUES (2, 'cesar', 'Profesor', '456', 0x6376766767, '3456', 'ender199310@hotmail.com', 0x89504e470d0a1a0a0000000d4948445200000140000000ad0806000000c13da6420000000473424954080808087c08648800000006624b474400ff00ff00ffa0bda7930000200049444154789cecbd79781cd779a7fb9eaaeabd1be86ea0b1ef2036122441525c444a94a8c5966ccb8e2d279697c476e2247672afc7933c73f364667233499e64267393cc649949ec8c97c456e2c896654bb6b5522b579122296e2041100b0112fbde8ddeaaeadc3f0a80488a94447561a154af1fc804bafad4a9ed57df39df720420c3e10a4cd3c0c1c16e1445613631811a3471fb3c20412e77a71cdef728aa60b27f526ae17005bff66b3f249b4d2f779f1cde83689a8b);
+INSERT INTO `usuarios` VALUES (3, 'jairo', 'Operador', '789', 0x646667686a, '3456789', 'li@gmail.com', 0x89504e470d0a1a0a0000000d4948445200000140000000ad0806000000c13da6420000000473424954080808087c08648800000006624b474400ff00ff00ffa0bda7930000200049444154789cecbd79781cd779a7fb9eaaeabd1be86ea0b1ef2036122441525c444a94a8c5966ccb8e2d279697c476e2247672afc7933c73f364667233499e64267393cc649949ec8c97c456e2c896654bb6b5522b579122296e2041100b0112fbde8ddeaaeadc3f0a80488a94447561a154af1fc804bafad4a9ed57df39df720420c3e10a4cd3c0c1c16e1445613631811a3471fb3c20412e77a71cdef728aa60b27f526ae17005bff66b3f249b4d2f779f1cde83689a8b);
