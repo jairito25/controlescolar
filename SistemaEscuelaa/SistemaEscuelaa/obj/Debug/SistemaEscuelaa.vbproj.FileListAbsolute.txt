@@ -28,3 +28,22 @@ C:\Users\evl\Documents\PROGRAMABASICC\control escolar\SistemaEscuelaa\SistemaEsc
 C:\Users\evl\Documents\PROGRAMABASICC\control escolar\SistemaEscuelaa\SistemaEscuelaa\obj\Debug\SistemaEscuelaa.prueba.resources
 C:\Users\evl\Documents\PROGRAMABASICC\control escolar\SistemaEscuelaa\SistemaEscuelaa\obj\Debug\SistemaEscuelaa.vbproj.GenerateResource.Cache
 C:\Users\evl\Documents\PROGRAMABASICC\control escolar\SistemaEscuelaa\SistemaEscuelaa\obj\Debug\SistemaEscuelaa.Form5.resources
+C:\Users\Personal\Downloads\controlescolar-master\controlescolar-master\SistemaEscuelaa\SistemaEscuelaa\obj\Debug\SistemaEscuelaa.exe
+C:\Users\Personal\Downloads\controlescolar-master\controlescolar-master\SistemaEscuelaa\SistemaEscuelaa\obj\Debug\SistemaEscuelaa.xml
+C:\Users\Personal\Downloads\controlescolar-master\controlescolar-master\SistemaEscuelaa\SistemaEscuelaa\obj\Debug\SistemaEscuelaa.pdb
+C:\Users\Personal\Downloads\controlescolar-master\controlescolar-master\SistemaEscuelaa\SistemaEscuelaa\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Personal\Downloads\controlescolar-master\controlescolar-master\SistemaEscuelaa\SistemaEscuelaa\obj\Debug\SistemaEscuelaa.Form1.resources
+C:\Users\Personal\Downloads\controlescolar-master\controlescolar-master\SistemaEscuelaa\SistemaEscuelaa\obj\Debug\SistemaEscuelaa.Form2.resources
+C:\Users\Personal\Downloads\controlescolar-master\controlescolar-master\SistemaEscuelaa\SistemaEscuelaa\obj\Debug\SistemaEscuelaa.Form3.resources
+C:\Users\Personal\Downloads\controlescolar-master\controlescolar-master\SistemaEscuelaa\SistemaEscuelaa\obj\Debug\SistemaEscuelaa.Form4.resources
+C:\Users\Personal\Downloads\controlescolar-master\controlescolar-master\SistemaEscuelaa\SistemaEscuelaa\obj\Debug\SistemaEscuelaa.Form5.resources
+C:\Users\Personal\Downloads\controlescolar-master\controlescolar-master\SistemaEscuelaa\SistemaEscuelaa\obj\Debug\SistemaEscuelaa.Login.resources
+C:\Users\Personal\Downloads\controlescolar-master\controlescolar-master\SistemaEscuelaa\SistemaEscuelaa\obj\Debug\SistemaEscuelaa.MDIParent1.resources
+C:\Users\Personal\Downloads\controlescolar-master\controlescolar-master\SistemaEscuelaa\SistemaEscuelaa\obj\Debug\SistemaEscuelaa.Resources.resources
+C:\Users\Personal\Downloads\controlescolar-master\controlescolar-master\SistemaEscuelaa\SistemaEscuelaa\obj\Debug\SistemaEscuelaa.prueba.resources
+C:\Users\Personal\Downloads\controlescolar-master\controlescolar-master\SistemaEscuelaa\SistemaEscuelaa\obj\Debug\SistemaEscuelaa.Reportes.resources
+C:\Users\Personal\Downloads\controlescolar-master\controlescolar-master\SistemaEscuelaa\SistemaEscuelaa\obj\Debug\SistemaEscuelaa.UsuariosR.resources
+C:\Users\Personal\Downloads\controlescolar-master\controlescolar-master\SistemaEscuelaa\SistemaEscuelaa\obj\Debug\SistemaEscuelaa.vbproj.GenerateResource.Cache
+C:\Users\Personal\Downloads\controlescolar-master\controlescolar-master\SistemaEscuelaa\SistemaEscuelaa\obj\Debug\SistemaEscuelaa.ProfesoresGC.resources
+C:\Users\Personal\Downloads\controlescolar-master\controlescolar-master\SistemaEscuelaa\SistemaEscuelaa\obj\Debug\SistemaEscuelaa.AlumnosGC.resources
+C:\Users\Personal\Downloads\controlescolar-master\controlescolar-master\SistemaEscuelaa\SistemaEscuelaa\obj\Debug\SistemaEscuelaa.Arranque.resources
