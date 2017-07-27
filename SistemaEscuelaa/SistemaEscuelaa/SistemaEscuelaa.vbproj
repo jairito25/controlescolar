@@ -37,6 +37,14 @@
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.Framework, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.InfoStore, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
     <Reference Include="mysql.data, Version=5.2.7.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\..\AppServ\MySQL\mysql-connector-net-5.2.7-noinstall\mysql.data.dll</HintPath>
@@ -46,9 +54,12 @@
       <HintPath>..\..\..\..\..\..\AppServ\MySQL\mysql-connector-net-5.2.7-noinstall\mysql.visualstudio.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core">
@@ -75,6 +86,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Alumno.vb" />
+    <Compile Include="AlumnosGC.Designer.vb">
+      <DependentUpon>AlumnosGC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AlumnosGC.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Arranque.Designer.vb">
+      <DependentUpon>Arranque.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Arranque.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ClaseDatos.vb" />
     <Compile Include="ClaseDatosAu.vb" />
     <Compile Include="ClaseDatosMa.vb" />
@@ -86,6 +109,18 @@
     <Compile Include="ClaseInsertarDPr.vb" />
     <Compile Include="ClasePrueba.vb" />
     <Compile Include="Conexion_.vb" />
+    <Compile Include="CrystalReport11.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReport2.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReport3.vb">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -117,6 +152,18 @@
     <Compile Include="Form5.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Login.Designer.vb">
+      <DependentUpon>Login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDIParent1.Designer.vb">
+      <DependentUpon>MDIParent1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MDIParent1.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ModConexion.vb" />
     <Compile Include="ModConsulta.vb" />
     <Compile Include="ModConsultaAu.vb" />
@@ -138,14 +185,44 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="ProfesoresGC.Designer.vb">
+      <DependentUpon>ProfesoresGC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ProfesoresGC.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="prueba.Designer.vb">
       <DependentUpon>prueba.vb</DependentUpon>
     </Compile>
     <Compile Include="prueba.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Reportes.Designer.vb">
+      <DependentUpon>Reportes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UsuariosR.Designer.vb">
+      <DependentUpon>UsuariosR.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UsuariosR.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="AlumnosGC.resx">
+      <DependentUpon>AlumnosGC.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Arranque.resx">
+      <DependentUpon>Arranque.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport11.vb</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
       <SubType>Designer</SubType>
@@ -166,14 +243,34 @@
       <DependentUpon>Form5.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDIParent1.resx">
+      <DependentUpon>MDIParent1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="ProfesoresGC.resx">
+      <DependentUpon>ProfesoresGC.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="prueba.resx">
       <DependentUpon>prueba.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes.resx">
+      <DependentUpon>Reportes.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UsuariosR.resx">
+      <DependentUpon>UsuariosR.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
@@ -187,6 +284,9 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -126,7 +126,7 @@ Public Class ClaseInsertarD
             .FilterIndex = 1
             'restaurar el directorio al cerrar el dialogo
             .RestoreDirectory = True
-            MsgBox()
+            'MsgBox()
 
         End With
         '

@@ -19,7 +19,7 @@ Public Class Login
         Dim oDataAdapter As New MySqlDataAdapter
         Dim oDataSet As New DataSet
         Dim aSql As String
-        Dim aSql2 As String
+        'Dim aSql2 As String
         Dim sw As Boolean = False
         Try
             'CONSULTA PARA DIRECTOR
